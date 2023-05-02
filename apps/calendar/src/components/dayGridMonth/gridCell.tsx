@@ -205,6 +205,7 @@ export function GridCell({ date, events = [], style, parentContainer, contentAre
     }
   }, [date, events, popupPosition, showSeeMorePopup]);
 
+
   const exceedCount = getExceedCount(
     events,
     contentAreaHeight,
@@ -221,13 +222,11 @@ export function GridCell({ date, events = [], style, parentContainer, contentAre
         type={CellBarType.header}
         exceedCount={exceedCount}
         date={date}
-        onClickExceedCount={onOpenSeeMorePopup}
       />
       <CellHeader
         type={CellBarType.footer}
         exceedCount={exceedCount}
         date={date}
-        onClickExceedCount={onOpenSeeMorePopup}
       />
     </div>
   );
